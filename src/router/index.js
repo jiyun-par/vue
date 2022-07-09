@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import TestExport from '../views/TestExport.vue'
 
 const routes = [
   {
@@ -16,6 +17,11 @@ const routes = [
     path: '/jiyun',
     name: 'jiyun',
     component: () => import(/* webpackChunkName: "jiyun" */ '../views/JiyunView.vue')
+  },
+  {
+    path: '/test',
+    name: 'name',
+    component: TestExport
   }
 
 ]
