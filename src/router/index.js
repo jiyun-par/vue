@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import TestExport from '../views/TestExport.vue'
+import AttributeBind from '../views/AttributeBind.vue'
+import DataBinding from '../views/DataBinding.vue'
+import VHtmlBind from '../views/VHtmlBind.vue'
+import FormBind from '../views/FormBind.vue'
+import ClassBind from '../views/ClassBind.vue'
 
 const routes = [
   {
@@ -9,21 +13,30 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/bind',
+    name: 'bind',
+    component: DataBinding
   },
   {
-    path: '/jiyun',
-    name: 'jiyun',
-    component: () => import(/* webpackChunkName: "jiyun" */ '../views/JiyunView.vue')
+    path: '/vhtml',
+    name: 'vhtml',
+    component: VHtmlBind
   },
   {
-    path: '/test',
-    name: 'name',
-    component: TestExport
+    path: '/form',
+    name: 'form',
+    component: FormBind
+  },
+  {
+    path: '/attribute',
+    name: 'attribute',
+    component: AttributeBind
+  },
+  {
+    path: '/class',
+    name: 'class',
+    component: ClassBind
   }
-
 ]
 
 const router = createRouter({
